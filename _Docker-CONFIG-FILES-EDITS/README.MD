@@ -19,3 +19,6 @@ Contiene:
 
 3. 'X-Frame-Options Header No set'
  default.template.conf
+
+4. 'X-Content-Type-Options Header Missing'
+ default.template.conf

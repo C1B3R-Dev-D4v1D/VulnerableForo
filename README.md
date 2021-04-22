@@ -6,6 +6,7 @@ David LV
 1. 'Cross-Domain Jscript source file inclusion' - Corregida.
 2. '.htaccess information Leak' - Corregida.
 3. 'X-Frame-Options Header No Set' - Corregida.
+4. 'X-Content-Type-Options Header Missing' - Corregida.
 
 ***
 
