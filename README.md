@@ -8,6 +8,7 @@ David LV
 3. 'X-Frame-Options Header No Set' - Corregida.
 4. 'X-Content-Type-Options Header Missing' - Corregida.
 5. 'Cookie no HttpOnly Flag' - Corregida.
+6. 'Cookie Without SameSite Attribute' - Corregida.
 
 ***
 
