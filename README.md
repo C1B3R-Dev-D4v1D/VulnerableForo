@@ -10,6 +10,7 @@ David LV
 5. 'Cookie no HttpOnly Flag' - Corregida.
 6. 'Cookie Without SameSite Attribute' - Corregida.
 7. 'Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)' - Corregida.
+8. 'XSS - Cross-Site Scripting' - Mitigada.
 
 ***
 

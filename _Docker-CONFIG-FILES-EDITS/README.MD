@@ -3,8 +3,7 @@ Esto es inseguro y será eliminado una vez finalice la entrega / evaluación de 
 
 ## Directorio "originales". Contiene los archivos de configuración antes de las modificaciones.
 Contiene:
-- default.template.conf -> Se elimina de este directorio.
-- php.ini -> Se elimina de este directorio.
+- Los 2 archivos ya han sido modificados.
 
 ## Modificaciones. Fuera de la carpeta "originales".
 Contiene:
@@ -26,3 +25,6 @@ Contiene:
 
 5. 'Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)'
  php.ini
+
+6. 'XSS - Cross-Site Scripting'
+ default.template.conf
