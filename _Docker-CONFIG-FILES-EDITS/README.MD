@@ -4,11 +4,12 @@ Esto es inseguro y será eliminado una vez finalice la entrega / evaluación de 
 ## Directorio "originales". Contiene los archivos de configuración antes de las modificaciones.
 Contiene:
 - default.template.conf -> Se elimina de este directorio.
-- php.ini -> docker-nginx-php-mysql-master/php/php.ini
+- php.ini -> Se elimina de este directorio.
 
 ## Modificaciones. Fuera de la carpeta "originales".
 Contiene:
 - default.template.conf -> docker-nginx-php-mysql-master/nginx/default.template
+- php.ini -> docker-nginx-php-mysql-master/php/php.ini
 
 ### Reparaciones:
 1. 'Cross-Domain Jscript source file inclusion'
@@ -22,3 +23,6 @@ Contiene:
 
 4. 'X-Content-Type-Options Header Missing'
  default.template.conf
+
+5. 'Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)'
+ php.ini

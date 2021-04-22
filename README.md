@@ -9,6 +9,7 @@ David LV
 4. 'X-Content-Type-Options Header Missing' - Corregida.
 5. 'Cookie no HttpOnly Flag' - Corregida.
 6. 'Cookie Without SameSite Attribute' - Corregida.
+7. 'Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)' - Corregida.
 
 ***
 
