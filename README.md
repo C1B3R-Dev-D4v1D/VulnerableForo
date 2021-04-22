@@ -1,4 +1,13 @@
 # Foro Vulnerable PHP
+CEC2020/21 - PPS-T4P3
+David LV
+
+## Vulnerabilidades Corregidas:
+1. 'Cross-Domain Jscript source file inclusion' - Corregida.
+2. '.htaccess information Leak' - Corregida.
+3. 'X-Frame-Options Header No Set' - Corregida.
+
+***
 
 Es recomendable utilizar el proyecto de NGINX/PHP/MySQL de nanoninja disponible en https://github.com/nanoninja/docker-nginx-php-mysql. 
 
