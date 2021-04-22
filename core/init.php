@@ -1,6 +1,13 @@
 <?php 
 //Start Session
-session_start();
+session_start([
+'cookie_secure' => true,
+'cache_expire' => 1500,
+'cookie_lifetime' =>  1500,
+'cookie_httponly' => 'true'
+]);
+
+
 
 //Include Configuration
 require_once('config/config.php');
