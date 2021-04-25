@@ -12,6 +12,7 @@ David LV
 7. 'Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)' - Corregida.
 8. 'XSS - Cross-Site Scripting' - Mitigada.
 9. 'SQL Injection - MySQL' - Corregida.
+10. 'Se configura HTTPS/SSL' - Hecho.
 
 ***
 

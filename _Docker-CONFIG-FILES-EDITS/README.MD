@@ -28,3 +28,7 @@ Contiene:
 
 6. 'XSS - Cross-Site Scripting'
  default.template.conf
+
+7. Se configura 'SSL / HTTPS'. Pero Aparece nueva vulnerabilidad "Incomplete or No Cache-control and Pragma HTTP Header Set"
+ default.template.conf
+ ../config/config.php

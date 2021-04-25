@@ -8,5 +8,4 @@ define ("DB_NAME", "forum");
 define("SITE_TITLE", "Bienvenido al foro!");
 
 //Paths
-define('BASE_URI','http://'.$_SERVER['SERVER_NAME'].':10001/VulnerableForo/');
-
+define('BASE_URI','https://'.$_SERVER['SERVER_NAME'].':10002/VulnerableForo/');
