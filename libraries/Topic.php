@@ -45,9 +45,9 @@ class Topic {
     
     //Get Category details
     public function getCategory($category_id){
-        //$this->db->query('select * from categories where id = :category_id');
-	$this->db->query("select * from categories where id = '" .$category_id . "'");
-        //$this->db->bind(':category_id',$category_id);
+        $this->db->query('select * from categories where id = :category_id');
+	//$this->db->query("select * from categories where id = '" .$category_id . "'");
+        $this->db->bind(':category_id',$category_id);
         
         //Assign result
         $result = $this->db->single();
@@ -90,8 +90,12 @@ class Topic {
     
     //get total replies
     public function getTotalReplies($topic_id){
-        $this->db->query('select * from replies where topic_id = '.$topic_id);
+        //$this->db->query('select * from replies where topic_id = '.$topic_id);
+        $this->db->query('select * from replies where topic_id = :topic_id');
+        $this->db->bind(':topic_id',$topic_id);
         $rows = $this->db->resultset();
+
+        //devolvemos rowCount
         return $this->db->rowCount();
     }
     
