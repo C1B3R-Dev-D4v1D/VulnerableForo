@@ -13,6 +13,7 @@ David LV
 8. 'XSS - Cross-Site Scripting' - Mitigada.
 9. 'SQL Injection - MySQL' - Corregida.
 10. 'Se configura HTTPS/SSL' - Hecho.
+11. 'Incomplete or No Cache-control and Pragma HTTP Header Set' - Corregida.
 
 ***
 
