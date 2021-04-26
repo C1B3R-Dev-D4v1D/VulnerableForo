@@ -8,6 +8,12 @@ session_start([
 'cookie_httponly' => 'true'
 ]);
 
+//Creamos el Token Anti CSRF
+if (empty($_SESSION['token'])) {
+    $_SESSION['token'] = bin2hex(random_bytes(32));
+}
+$token = $_SESSION['token'];
+
 //Include Configuration
 require_once('config/config.php');
 

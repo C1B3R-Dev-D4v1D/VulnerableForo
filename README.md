@@ -14,6 +14,7 @@ David LV
 9. 'SQL Injection - MySQL' - Corregida.
 10. 'Se configura HTTPS/SSL' - Hecho.
 11. 'Incomplete or No Cache-control and Pragma HTTP Header Set' - Corregida.
+12. 'Absense of Anti-CSRF Tokens' - Corregida.
 
 ***
 

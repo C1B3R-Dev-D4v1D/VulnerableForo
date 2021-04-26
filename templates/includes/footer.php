@@ -13,11 +13,13 @@
                             </div>
                             <br />
                             <form role="form" method="post" action="logout.php">
+                                <input name="antiCSRF" type="hidden" value="<?php echo $_SESSION['token'];?>" />
                                 <input type="submit" name="do_logout" class="btn btn-default" value="Log Out" />
                             </form>
                         <?php else : ?>
                             <form role="form" method="post" action="login.php">
                                 <div class="form-group">
+                                    <input name="antiCSRF" type="hidden" value="<?php echo $_SESSION['token'];?>" />
                                     <label>Username</label>
                                     <input name="username" type="text" class="form-control" placeholder="Introduce el Username" />
                                 </div>

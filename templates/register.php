@@ -5,6 +5,7 @@
         <label>Name*</label><input type="text" class="form-control" name="name" placeholder="Enter your Name" />
     </div>
     <div class="form-group">
+        <input name="antiCSRF" type="hidden" value="<?php echo $_SESSION['token'];?>" />
         <label>Email Address*</label><input type="email" class="form-control" name="email" placeholder="Enter your Email Address" />    
     </div>
     <div class="form-group">

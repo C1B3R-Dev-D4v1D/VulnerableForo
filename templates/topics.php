@@ -34,4 +34,4 @@
     <li>Total Number of Categories: <strong><?php echo $totalCategories; ?></strong></li>
 </ul>
 
-<?php include('includes/footerr.php'); ?>
+<?php include('includes/footer.php'); ?>
