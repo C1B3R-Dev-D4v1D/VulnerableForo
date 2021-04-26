@@ -35,4 +35,7 @@ Contiene:
 
  8. Se repara la nueva Vulnerabilidad "Incomplete or No Cache-control and Pragma HTTP Header Set"
  default.template.conf
+
+ 9. Se añade cabecera de seguridad recomendada "HTTP Strict Transport Secure"
+ default.template.conf
  
