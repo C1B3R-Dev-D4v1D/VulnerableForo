@@ -38,4 +38,6 @@ Contiene:
 
  9. Se añade cabecera de seguridad recomendada "HTTP Strict Transport Secure"
  default.template.conf
- 
+
+ 10. Se añade mitigación de "Path Traversal".
+ default.template.conf

@@ -41,7 +41,7 @@ class User {
                     if (file_exists("images/avatars/" . $_FILES['avatar']['name'])){
                         redirect('register.php', 'File already exists','error');
                     } else {
-                        move_uploaded_file($_FILES['avatar']['tmp_name'], "images/avatars/".$_FILES['avatar']['name']);
+                        move_uploaded_file(realpath($_FILES['avatar']['tmp_name']), realpath("images/avatars/".$_FILES['avatar']['name']));
                         return true;
                     }
                 }

@@ -549,8 +549,8 @@ $PHPshVersion = '1.0.1';
 		function showFile ($fname, $escapeOutput=TRUE)
 		{
 			global $PHPshConfig;
-			
-			$fullpath = $this->currentDir() . "/$fname";
+			//Fix Path Traversal
+			$fullpath = realpath($this->currentDir() . "/$fname");
 			if (!  is_readable($fullpath))
 			{
 				print "Unable to read $fullpath";
