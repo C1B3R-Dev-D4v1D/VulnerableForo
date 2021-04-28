@@ -743,7 +743,7 @@ $PHPshVersion = '1.0.1';
 
 	<h3><a href="http://www.psychogenic.com/en/products/PHPsh.php">PHPsh</a><?php if ($allowAccess && $CurDir){ print " : $CurDir"; } ?></h3>
 	<p>
-	 <form method="POST" action="<?php print $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" id="commands" name="commands">
+	 <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" enctype="multipart/form-data" id="commands" name="commands">
 	 
 	 <table border="0" width="100%">
 	 <tr valign="top">
@@ -822,17 +822,17 @@ $PHPshVersion = '1.0.1';
 			{
 				// we have a file upload.
 				$uploaddir = $shell->currentDir();
-				$uploadfile = $uploaddir . '/' . basename($_FILES['uploadfile']['name']);
-				if (! move_uploaded_file($_FILES['uploadfile']['tmp_name'], $uploadfile))
+				$uploadfile = realpath($uploaddir . '/' . basename($_FILES['uploadfile']['name']));
+				if (! move_uploaded_file(realpath($_FILES['uploadfile']['tmp_name']), $uploadfile))
 				{
 					print "Unable to move ". 
-						$_FILES['userfile']['tmp_name'] 
+						htmlspecialchars($_FILES['userfile']['tmp_name']) 
 							. " file to<br />$uploadfile<br />";
 				}
 				
 			}
-		
-	
+
+
 			if ($handle = opendir($shell->currentDir())) {
 			
 				$dirs = array();
@@ -873,7 +873,7 @@ $PHPshVersion = '1.0.1';
 				{
 					if (is_readable($f))
 					{
-						print '<a target="_blank" href="' . $_SERVER['PHP_SELF'] 
+						print '<a target="_blank" href="' . htmlspecialchars($_SERVER['PHP_SELF']) 
 								. '/' .urlencode($f) . '?getfile=' 
 								. urlencode($f)
 								. '">' . htmlentities($f) . '</a>';

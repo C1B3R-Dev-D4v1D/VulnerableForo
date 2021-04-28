@@ -10,7 +10,7 @@ David LV
 5. 'Cookie no HttpOnly Flag' - Corregida.
 6. 'Cookie Without SameSite Attribute' - Corregida.
 7. 'Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s)' - Corregida.
-8. 'XSS - Cross-Site Scripting' - Mitigada.
+8. 'XSS - Cross-Site Scripting' - Corregida.
 9. 'SQL Injection - MySQL' - Corregida.
 10. 'Se configura HTTPS/SSL' - Hecho.
 11. 'Incomplete or No Cache-control and Pragma HTTP Header Set' - Corregida.
@@ -19,6 +19,7 @@ David LV
 14. 'Path Traversal' - Corregida. (sonarcloud) - Corregida.
 15. 'SQL Injection - Authentication Bypass' - Corregida.
 16. 'Open Redirect / A5 - Broken Access' (Sonarcloud) - Corregida.
+17. 'Cross-Site Scripting (XSS) / A7 Cross-Site Scripting' reflected (XSS) / Hotspot XSS - (Sonarcloud) - Corregida.
 
 ***
 

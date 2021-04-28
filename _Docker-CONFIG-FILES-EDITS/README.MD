@@ -31,7 +31,7 @@ Contiene:
 
 7. Se configura 'SSL / HTTPS'. Pero Aparece nueva vulnerabilidad "Incomplete or No Cache-control and Pragma HTTP Header Set"
  default.template.conf
- ../config/config.php
+ config/config.php
 
  8. Se repara la nueva Vulnerabilidad "Incomplete or No Cache-control and Pragma HTTP Header Set"
  default.template.conf
@@ -41,3 +41,6 @@ Contiene:
 
  10. Se añade mitigación de "Path Traversal".
  default.template.conf
+
+ 11. Se añade "session.cookie_httponly" para corregir "Hotspot: Cross-Site Scripting (XSS)" (Sonarcloud).
+  ../etc/php/php.ini
