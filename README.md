@@ -20,6 +20,7 @@ David LV
 15. 'SQL Injection - Authentication Bypass' - Corregida.
 16. 'Open Redirect / A5 - Broken Access' (Sonarcloud) - Corregida.
 17. 'Cross-Site Scripting (XSS) / A7 Cross-Site Scripting' reflected (XSS) / Hotspot XSS - (Sonarcloud) - Corregida.
+18. 'Hotspot: Insecure Configuration' - (Sonarcloud) - Corregida.
 
 ***
 

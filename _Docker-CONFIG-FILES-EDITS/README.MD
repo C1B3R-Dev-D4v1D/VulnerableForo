@@ -44,3 +44,6 @@ Contiene:
 
  11. Se añade "session.cookie_httponly" para corregir "Hotspot: Cross-Site Scripting (XSS)" (Sonarcloud).
   ../etc/php/php.ini
+
+ 12. Se añade "session.cookie_secure" para corregir "Hotspot: Insecure Configuration" (Sonarcloud).
+  ../etc/php/php.ini
