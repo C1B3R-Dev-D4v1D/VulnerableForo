@@ -17,6 +17,7 @@ David LV
 12. 'Absense of Anti-CSRF Tokens' - Corregida.
 13. 'HTTP Strict Transport Secure' - Añadimos cabecera de seguridad recomendada.
 14. 'Path Traversal' - Corregida. (sonarcloud) - Corregida.
+15. 'SQL Injection - Authentication Bypass' - Corregida.
 
 ***
 
