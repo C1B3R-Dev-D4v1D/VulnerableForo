@@ -2,7 +2,7 @@
 CEC2020/21 - PPS-T4P3
 David LV
 
-## Vulnerabilidades Corregidas:
+## Vulnerabilidades Zap Corregidas:
 1. 'Cross-Domain Jscript source file inclusion' - Corregida.
 2. '.htaccess information Leak' - Corregida.
 3. 'X-Frame-Options Header No Set' - Corregida.
@@ -18,6 +18,7 @@ David LV
 13. 'HTTP Strict Transport Secure' - Añadimos cabecera de seguridad recomendada.
 14. 'Path Traversal' - Corregida. (sonarcloud) - Corregida.
 15. 'SQL Injection - Authentication Bypass' - Corregida.
+16. 'Open Redirect / A5 - Broken Access' (Sonarcloud) - Corregida.
 
 ***
 
