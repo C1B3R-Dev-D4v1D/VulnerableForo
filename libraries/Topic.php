@@ -64,7 +64,15 @@ class Topic {
         $results=$this->db->resultset();
         return $results;
     }
-    
+
+    //Get User (añadida)
+    public function getUser($user_id){
+        $this->db->query('select * from users where id = :user_id');
+        $this->db->bind(':user_id',$user_id);
+        //Assign result
+        $result = $this->db->single();
+        return $result;
+    }    
     
     //Get Topic By ID
     public function getTopic($id){
