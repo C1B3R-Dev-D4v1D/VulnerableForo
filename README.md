@@ -22,7 +22,8 @@ David LV
 17. 'Cross-Site Scripting (XSS) / A7 Cross-Site Scripting' reflected (XSS) / Hotspot XSS - (Sonarcloud) - Corregida.
 18. 'Hotspot: Insecure Configuration' - (Sonarcloud) - Corregida.
 19. 'Topics de un usuario no funciona' - Corregido / Funcionalidad Completada.
-20. 'Topics no muestra Nº Total de Usuarios en (Estadisticas del Foro)' - Corregido.
+20. 'Topics no muestra Nº Total de Usuarios en (Estadisticas del Foro)' - Corregido / Funcionalidad Completada.
+21. 'Topics no muestra avatar de usuarios cuando filtra por categoría' - Corregido / Funcionalidad Completada.
 
 ***
 
