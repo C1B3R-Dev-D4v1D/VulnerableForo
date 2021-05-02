@@ -8,9 +8,9 @@ $topic = new Topic;
 $template = new Template('templates/frontpage.php');
 
 //Get Category id from url
-$category = isset($_GET['category']) ? $_GET['category']:null;
+$category = $user_id = isset($_GET['category']) ? ((int) filter_var($_GET['category'],FILTER_SANITIZE_NUMBER_INT)):null;
 //Get User id from url
-$user_id = isset($_GET['user']) ? $_GET['user']:null;
+$user_id = $user_id = isset($_GET['user']) ? ((int) filter_var($_GET['user'],FILTER_SANITIZE_NUMBER_INT)):null;
 
 //Assign Variables to template object
 

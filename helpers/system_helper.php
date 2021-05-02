@@ -3,9 +3,9 @@
 //Redirect to Page
 function redirect($page=FALSE, $message=NULL, $message_type=NULL){
     if(is_string($page)){
-        $location = $page;
+        $location = htmlspecialchars($page);
     } else{
-        $location=$_SERVER['SCRIPT_NAME'];
+        $location = htmlspecialchars($_SERVER['SCRIPT_NAME']);
     }
     
     //Check for message

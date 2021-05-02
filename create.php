@@ -9,10 +9,10 @@ if (isset($_POST['do_create'])){
     
     //Create data array
     $data = array();
-    $data['title'] = $_POST['title'];
+    $data['title'] = limpiar_Datos($_POST['title']);
     //$data['slug'] = ucwords(str_replace(' ', '-', $_POST['slug']));
     $data['body'] = $_POST['body'];
-    $data['category_id'] = $_POST['category_id'];
+    $data['category_id'] = (int) filter_var($_POST['category_id'],FILTER_SANITIZE_NUMBER_INT);
     $data['user_id'] = getUser()['user_id'];
     
     //Required Fields

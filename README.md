@@ -24,6 +24,7 @@ David LV
 19. 'Topics de un usuario no funciona' - Corregido / Funcionalidad Completada.
 20. 'Topics no muestra Nº Total de Usuarios en (Estadisticas del Foro)' - Corregido / Funcionalidad Completada.
 21. 'Topics no muestra avatar de usuarios cuando filtra por categoría' - Corregido / Funcionalidad Completada.
+22. 'Otras SQL Injections' - Corregida.
 
 ***
 

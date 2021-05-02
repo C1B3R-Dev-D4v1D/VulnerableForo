@@ -13,6 +13,21 @@ function urlFormat($str){
     return $str;
 }
 
+//limpiar Datos
+  function limpiar_Datos($midata) {
+    $midata = trim($midata); //eliminar espacios en blanco a ambos lados.
+    $search = array(
+        '@<script[^>]*?>.*?</script>@si',   // Elimina javascript
+        '@<[\/\!]*?[^<>]*?>@si',            // Elimina las etiquetas HTML
+        '@<style[^>]*?>.*?</style>@siU',    // Elimina las etiquetas de estilo
+        '@<![\s\S]*?--[ \t\n\r]*>@'         // Elimina los comentarios multi-línea
+    );
+    $midata = preg_replace($search, '', $midata);
+    $midata = stripslashes($midata);//elimina barras invertidas.
+    $midata = htmlspecialchars($midata);//convierte algunos caracteres predefinidos en entidades HTML
+    return $midata;
+  } 
+
 //Format date
 function formatDate($date) {
     $date = date("F j, Y, g:i a",strtotime($date));

@@ -4,8 +4,8 @@
 if ((!empty($_POST['antiCSRF']))&&(isset($_POST['do_login']))) {
     if (hash_equals($_SESSION['token'], $_POST['antiCSRF'])) {
         //get username and password
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = limpiar_Datos($_POST['username']);
+        $password = limpiar_Datos($_POST['password']);
             
         //Create user object
         $user = new User;
