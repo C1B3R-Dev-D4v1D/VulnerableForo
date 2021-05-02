@@ -1,6 +1,7 @@
 <?php require('core/init.php'); ?>
 <?php 
-//Create Topic Object
+//Create Objects
+$user = new User;
 $topic = new Topic;
 
 //Get Template and Assign Vars
@@ -15,6 +16,7 @@ $user_id = isset($_GET['user']) ? $_GET['user']:null;
 
 $template->totalTopics = $topic->getTotalTopics();
 $template->totalCategories = $topic->getTotalCategories();
+$template->totalUsers = $user->getTotalUsers();
 
 if (isset($category)){
     $template->topics = $topic->getByCategory($category);
