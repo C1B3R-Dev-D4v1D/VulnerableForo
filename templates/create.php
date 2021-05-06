@@ -18,6 +18,7 @@
                                 <textarea id="body" rows="10" cols="80" class="form-control" name="body"></textarea>
                                 <script>CKEDITOR.replace('body');</script>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="<?php echo RC_STE_W;?>"></div>
                             <button type="submit" class="btn btn-default" name="do_create">Submit</button>
                             
                         </form>

@@ -15,18 +15,22 @@ if (isset($_POST['do_create'])){
     $data['category_id'] = (int) filter_var($_POST['category_id'],FILTER_SANITIZE_NUMBER_INT);
     $data['user_id'] = getUser()['user_id'];
     
-    //Required Fields
-    $field_array = array('title','body','category_id');
-    
-    if($validate->isRequired($field_array)){
-        //Create Topic
-        if($topic->create($data)){
-            redirect('index.php', 'Your topic has been posted', 'success');
+    //Val-Recaptcha
+    if($validate->isValidReCaptcha()){
+        //Required Fields
+        $field_array = array('title','body','category_id');
+        if($validate->isRequired($field_array)){
+            //Create Topic
+            if($topic->create($data)){
+                redirect('index.php', 'Your topic has been posted', 'success');
+            } else {
+                redirect('topic.php?id='.$topic_id, 'Something went wrong whti your post.', 'error');
+            }
         } else {
-            redirect('topic.php?id='.$topic_id, 'Something went wrong whti your post.', 'error');
+            redirect('create.php', 'Please fill in all required fields', 'error');
         }
-    } else {
-        redirect('create.php', 'Please fill in all required fields', 'error');
+    }else{
+        redirect('create.php', 'Error Captcha','error');
     }
     
 }
