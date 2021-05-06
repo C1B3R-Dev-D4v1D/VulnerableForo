@@ -28,6 +28,7 @@ David LV
 23. 'Algunos ajustes para SONAR y eliminar librerias obsoletas' - Corregido
 24. 'reCaptcha V2' - Configurado/implementado.
 25. 'Formulario "Crear Topic" con reCaptcha' - implementado.
+26. 'Formulario "Registro" con reCaptcha' - implementado.
 
 ***
 

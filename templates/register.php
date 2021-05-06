@@ -22,7 +22,8 @@
     </div>
     <div class="form-group">
         <label>About Myself</label><textarea id="about" rows="6" cols="80" class="form-control" name="about" placeholder="Tell us something about yourself (Optional)"></textarea>
-    </div>   
+    </div>
+    <div class="g-recaptcha" data-sitekey="<?php echo RC_STE_W;?>"></div>   
     <input name="register" type="submit" class="btn btn-default" value="Register" />
 </form>
 

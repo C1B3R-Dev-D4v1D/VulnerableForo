@@ -1,7 +1,5 @@
 <?php require('core/init.php'); ?>
 <?php 
-//Create Topic Object
-$topic = new Topic;
 //Create User Object
 $user = new User;
 //Create validate object
@@ -17,6 +15,8 @@ if(isset($_POST['register'])){
     $data['about'] = limpiar_Datos($_POST['about']);
     $data['last_activity'] = date("Y-m-d H:i:s");
     
+//Val-Recaptcha
+if($validate->isValidReCaptcha()){
     //Required fields
     $field_array = array('name','email','username','password','password2');
     
@@ -45,6 +45,9 @@ if(isset($_POST['register'])){
     } else {
         redirect('register.php',"Please fill in All required fields",'error');
     }
+}else{
+    redirect('register.php', 'Error Captcha','error');
+}
     
 
 }
