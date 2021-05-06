@@ -27,6 +27,7 @@
                                     <label>Password</label>
                                     <input name="password" type="password" class="form-control" placeholder="password" />
                                 </div>
+                                <div class="g-recaptcha" data-sitekey="<?php echo RC_STE_W;?>"></div>
                                 <button name="do_login" type="submit" class="btn btn-primary">Login</button> <a class="btn btn-default" href="register.php">Crear Cuenta</a>
                             </form>
                         <?php endif; ?>
