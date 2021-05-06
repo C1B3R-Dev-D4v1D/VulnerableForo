@@ -47,3 +47,6 @@ Contiene:
 
  12. Se añade "session.cookie_secure" para corregir "Hotspot: Insecure Configuration" (Sonarcloud).
   ../etc/php/php.ini
+
+ 13. Se añade 'Referrer-Policy' y 'Content-Security-Policy'.
+ default.tempale.conf

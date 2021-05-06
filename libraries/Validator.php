@@ -26,5 +26,33 @@ class Validator{
         }
         return false;
     }
+    //Check ReCaptcha
+    public function isValidReCaptcha(){
+        $g_recaptcha_res = $_POST["g-recaptcha-response"];
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = array(
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\n", 
+            'secret' => RC_SCR_K,
+            'response' => $g_recaptcha_res,
+            'remoteip' => $_SERVER['HTTP_CLIENT_IP']
+        );
+        $options = array(
+            'http' => array (
+                'method' => 'POST',
+                'content' => http_build_query($data)
+            )
+        );
+        $context  = stream_context_create($options);
+        $verify = file_get_contents($url, false, $context);
+        $captcha_success = json_decode($verify);
+
+        if ($captcha_success->success){
+            return true;
+        }else{
+            return false;
+        }
+
+    }//Fin
 }
 ?>
