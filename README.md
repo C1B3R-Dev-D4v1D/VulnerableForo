@@ -31,6 +31,7 @@ David LV
 26. 'Formulario "Registro" con reCaptcha' - implementado.
 27. 'Formulario "Login" con reCaptcha' - implementado.
 28. 'Se añade uso de perfiles' - implementado.
+29. 'Se añade Seguridad en Zonas' - implementado.
 
 ***
 
