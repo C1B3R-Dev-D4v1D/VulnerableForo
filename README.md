@@ -30,6 +30,7 @@ David LV
 25. 'Formulario "Crear Topic" con reCaptcha' - implementado.
 26. 'Formulario "Registro" con reCaptcha' - implementado.
 27. 'Formulario "Login" con reCaptcha' - implementado.
+28. 'Se añade uso de perfiles' - implementado.
 
 ***
 

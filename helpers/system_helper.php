@@ -57,7 +57,7 @@ function isLoggedIn(){
 
 
 function isAdmin(){
-    if($_SESSION['username'] == 'test1'){
+    if($_SESSION['profile'] == PRF_ADMIN){
         return true;
     } else {
         return false;

@@ -17,7 +17,13 @@ if ((!empty($_POST['antiCSRF']))&&(isset($_POST['do_login']))) {
             $user = new User;
                 
             if($user->login($username, $password)){
-                redirect(urlFormat($target_destino),'You have been logged in.', 'success');
+                //obtenemos id perfil del usuario
+                if($_SESSION['profile'] == $user->getProfile( $_SESSION['user_id'])["idperfil"]){
+                    redirect(urlFormat($target_destino),'You have been logged in.', 'success');
+                }else{
+                    $_SESSION['profile']= (int) PRF_VISIT;
+                    redirect(urlFormat($target_destino),'Invalid Profile', 'error');
+                }
             } else {
                 redirect(urlFormat($target_destino),'Invalid login', 'error');
             }

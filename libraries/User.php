@@ -73,6 +73,7 @@ class User {
         $_SESSION['user_id']=$result['id'];
         $_SESSION['username']=$result['username'];
         $_SESSION['name']=$result['name'];
+        $_SESSION['profile']= (int) $result['idprofile'];
     }
     
     //User Logout
@@ -82,6 +83,7 @@ class User {
         unset($_SESSION['username']);
         unset($_SESSION['name']);
         unset($_SESSION['token']);
+        $_SESSION['profile']= (int) PRF_VISIT;
         return true;
     }
     
@@ -90,6 +92,15 @@ class User {
         $this->db->query('select * from users');
         $result = $this->db->resultset();
         return $this->db->rowCount();
+    }
+
+    //Perfil de Usuario
+    public function getProfile($iduser){
+        $this->db->query('select u.idprofile as idperfil, p.name as perfil FROM users u, profiles p WHERE u.idprofile=p.idprofile AND u.id = :iduser');
+        $this->db->bind(':iduser',$iduser);
+
+        $row = $this->db->single();
+        return $row;
     }
 }
 ?>
