@@ -23,6 +23,8 @@ if($validate->isValidReCaptcha()){
     if ($validate->isRequired($field_array)){
         if($validate->isValidEmail($data['email'])){
             if($validate->passwordsMatch($data['password'],$data['password2'])){
+                //ciframos la clave para guardarla segura.
+                $data['password']=$user->cifra_clave($data['password']);
                 //Upload Avatar image
                 if ($user->uploadAvatar()){
                     $data['avatar'] = $_FILES["avatar"]["name"];

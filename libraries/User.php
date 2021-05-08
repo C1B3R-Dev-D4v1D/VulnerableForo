@@ -4,6 +4,10 @@ class User {
     //Initialize DB Variable
     private $db;
     
+    //Opciones Contraseña
+    const HHASH = PASSWORD_DEFAULT;
+    const HCOST = 14;
+
     //Constructor
     public function __construct(){
         $this->db = new Database;
@@ -50,9 +54,57 @@ class User {
         }
 
     }
+
+    //Cifrar Clave
+    public function cifra_clave($mipassword){
+        return password_hash($mipassword, self::HHASH, ['cost' => self::HCOST]);
+    }
+   
+    //funcion GetHashclave
+    public function getHashclave($username){
+        $this->db->query('select password as hashClave, id FROM users WHERE username = :username');
+        $this->db->bind(':username',$username);
+        
+        $row = $this->db->single();
+        
+        return $row;
+    }
+
+    //funcion Actualiza Hash de Clave
+    public function reHashMe($data){
+        //Query
+        $this->db->query('update users set password = :newHash WHERE id = :id');
+        //Bind Values
+        $this->db->bind(':newHash',$data['hashClave']);
+        $this->db->bind(':id',$data['id']);
+        
+        //Execute
+        if($this->db->execute()){
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     //User login 
     public function login($username,$password){
+        //obtenemos Hash Almacenado del usuario
+        $miClaveHash=$this->getHashclave($username);
+        //Verificamos la clave introducida y el hash
+        if(password_verify($password,$miClaveHash['hashClave'])){
+            //Comprobamos si el hash necesita un rehash, actualizacion de seguridad
+            if (password_needs_rehash($this->data->passwordHash, self::HHASH, ['cost' => self::HCOST])) {
+                    //reHasheamos la clave
+                    $miClaveHash['hashClave']=$this->cifra_clave($password);
+                    //actualizamos el nuevo Hash en la BD
+                    $this->reHashMe($miClaveHash);
+            }
+            //nos quedamos con el Hash de la clave introducida
+            $password = $miClaveHash['hashClave'];
+        }else{
+            return false;
+        }
+
         //Reparada SQL Injection - Authentication Bypass
         $this->db->query('select * from users where username = :username and password = :password');
         $this->db->bind(':username',$username);
